@@ -1,0 +1,62 @@
+# NOTES — FTW Reputation Fork
+
+## Why I forked this
+
+This fork is based on the **FTW Reputation** repository, a project implementing reputation systems with resistance to Sybil-style manipulation.  
+Reputation and trust scoring are core concerns for integrity mechanisms in social and relationship platforms, where evaluating the *quality and pattern of interaction* matters as much as preventing abuse.
+
+I am examining this code as a **reference and study artifact** — to understand how reputation systems are structured, what assumptions they make, and how they might be adapted for systems where safety and meaningful connection are both priorities.
+
+## What this codebase implements
+
+FTW Reputation includes:
+- A reputation model that factors in activity and engagement
+- Logic to resist Sybil-like inflation of score
+- Component structures for network-aware trust signals
+- Example test cases demonstrating behavior under certain conditions
+
+These elements illustrate key design ideas around combining multiple signals to generate an aggregate reputation score.
+
+## Why this matters for trust & safety
+
+Reputation systems can help platforms:
+- prioritize review queues for high-risk actors
+- smooth out enforcement decisions through graduated signals
+- detect patterns that correlate with harmful behavior
+- reduce reliance on binary bans alone
+
+On dating platforms, reputation logic could support:
+- throttling or additional verification for accounts with inconsistent interaction patterns
+- enriched signals for community health indicators
+- early detection of coordinated or unnatural activity
+
+## What I’m thinking about
+
+From this codebase, I am exploring:
+- How reputation score vectors correlate with contextual risk
+- Which signals are most predictive without depending on message content
+- How to calibrate reputation so it *aids* trust but doesn’t replicate bias
+- Where reputation intersects with progressive friction and rate limits
+
+## Risks and tradeoffs
+
+Reputation systems can easily become:
+- opaque to users
+- biased against marginalized groups
+- over-fit to a chosen dataset
+- exploitable if the signal set is predictable
+
+A strong design acknowledges these risks explicitly.
+
+## How this connects to my other work
+
+This fork intersects with broader integrity themes in:
+- `platform-integrity-systems/risk-signals.md`
+- `dating-trust-safety-playbook/threat-model.md`
+- `platform-integrity-systems/metrics.md`
+
+## Attribution
+
+This fork is derived from the original FTW Reputation project. All original authorship, rights, and licensing remain intact. No claim of original ownership is made here.
+
+Original project: https://github.com/sahajgarg/ftw-reputation
